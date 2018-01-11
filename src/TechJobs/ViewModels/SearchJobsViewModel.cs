@@ -7,9 +7,6 @@ namespace TechJobs.ViewModels
 {
     public class SearchJobsViewModel : BaseViewModel
     {
-        //  #7.1 - Extract members common to JobFieldsViewModel
-        // to BaseViewModel
-
         // The search results
         public List<Job> Jobs { get; set; }
 
@@ -20,17 +17,6 @@ namespace TechJobs.ViewModels
         public SearchJobsViewModel()
         {
             Column = JobFieldType.All;
-
-            // Populate the list of all columns
-
-            Columns = new List<JobFieldType>();
-
-            foreach (JobFieldType enumVal in Enum.GetValues(typeof(JobFieldType)))
-            {
-                Columns.Add(enumVal);
-            }
-
-
         }
     }
 }
